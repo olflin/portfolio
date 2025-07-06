@@ -1,0 +1,14 @@
+.footer-icon {
+  transition: color 0.3s ease;
+}
+
+.footer-icon:hover {
+  color: white;
+}
+
+a {
+  transition:  color 0.3s ease;
+}
+a:hover {
+  font-weight: bold;
+}

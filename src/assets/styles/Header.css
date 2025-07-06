@@ -2,3 +2,11 @@
   font-weight: bold;
   text-decoration: underline;
 }
+
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+.nav-link {
+  transition: color 0.3s ease;
+}

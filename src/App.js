@@ -8,6 +8,7 @@ import Portfolio from './pages/Portfolio.jsx';
 import Services from './pages/Services.jsx';
 
 import Header from './components/Header.jsx';
+import Footer from './components/Footer.jsx';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/services" element={<Services />} />
       </Routes>
+      <Footer />
     </>
   );
 }
