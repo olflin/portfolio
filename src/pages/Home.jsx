@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Button } from 'react-bootstrap';
-import GitHubModal from '../components/Modal';
+import Modal from '../components/Modal';
 
 function Home() {
   const [showModal, setShowModal] = useState(false);
@@ -19,7 +19,7 @@ function Home() {
       </div>
 
       {/* Modale déclenchée */}
-      <GitHubModal show={showModal} handleClose={handleClose} />
+      <Modal show={showModal} handleClose={handleClose} />
     </div>
   );
 }

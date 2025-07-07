@@ -28,14 +28,15 @@ function GitHubModal({ show, handleClose }) {
   }, []);
 
   return (
-<Modal show={show} onHide={handleClose} centered dialogClassName="modal-dark">
+    <Modal show={show} onHide={handleClose} centered size="lg"
+      data-bs-theme="dark">
 
       <Modal.Header closeButton>
-        <Modal.Title className="fw-bold">Profil GitHub</Modal.Title>
+        <Modal.Title className="fw-bold">Mon profil GitHub</Modal.Title>
       </Modal.Header>
 
       <Modal.Body>
-        <Container className="py-4">
+        <Container>
             <Row>
                 {loading ? (
                   <Col className="text-center">
@@ -56,25 +57,19 @@ function GitHubModal({ show, handleClose }) {
                           <img
                             src={userData.avatar_url}
                             alt={`Avatar de ${userData.login}`}
-                            width="100"
-                            className="mb-3 rounded-circle"
+                            width="100%"
+                            className="mb-3"
                           />
                         </div>
                     </Col>
                     <Col md={6} className="text-center">
-                        <div className="text-start mx-auto" style={{ maxWidth: "300px" }}>
-                          <p><strong>Nom d’utilisateur :</strong> {userData.login}</p>
-                          <p><strong>Bio :</strong> {userData.bio || "Aucune biographie"}</p>
-                          <p><strong>Repos publics :</strong> {userData.public_repos}</p>
-                          <p><strong>Suiveurs :</strong> {userData.followers}</p>
-                          <a
-                            href={userData.html_url}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="btn btn-primary btn-sm"
-                          >
-                            Voir le profil complet
-                          </a>
+                        <div className="text-start">
+                          <p className='border-bottom pb-3'><i class="bi bi-person pe-2"></i> <a href={userData.html_url} target="_blank" rel="noopener noreferrer"> John Doe</a></p>
+                          <p className='border-bottom pb-3'><i class="bi bi-geo-alt pe-2"></i> {userData.location}</p>
+                          <p className='border-bottom pb-3'><i class="bi bi-card-text pe-2"></i> {userData.bio || "Aucune biographie"}</p>
+                          <p className='border-bottom pb-3'><i class="bi bi-box pe-2"></i>Repositories : {userData.public_repos}</p>
+                          <p className='border-bottom pb-3'><i class="bi bi-people pe-2"></i>Followers : {userData.followers}</p>
+                          <p><i class="bi bi-people pe-2"></i>Following : {userData.following}</p>
                         </div>
                     </Col>
                   </>
