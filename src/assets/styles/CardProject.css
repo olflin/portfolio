@@ -1,0 +1,14 @@
+.card-project {
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-project:hover {
+  background-color: #efefef;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px);
+}
+
+.card-project .card-img-top {
+  object-fit: cover;
+  height: 100%;
+}
