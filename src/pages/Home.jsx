@@ -1,6 +1,9 @@
 import { useState } from 'react';
-import { Button } from 'react-bootstrap';
+import { Button, Container, Row, Col, ProgressBar} from 'react-bootstrap';
 import Modal from '../components/Modal';
+import '../assets/styles/Home.css';
+import Johndoe from '../assets/img/john-doe-about.jpg';
+
 
 function Home() {
   const [showModal, setShowModal] = useState(false);
@@ -9,18 +12,61 @@ function Home() {
   const handleClose = () => setShowModal(false);
 
   return (
-    <div className="hero-container">
-      <div className="hero-content">
-        <h1>John Doe</h1>
-        <h2>Développeur Web en formation</h2>
-        <Button variant="primary" onClick={handleOpen}>
-          En savoir plus
-        </Button>
-      </div>
+    <Container fluid className="hero mb-5 p-0">
+      <Row className="justify-content-md-center">
+        <Col md={12} className="text-center px-0 mb-4">
+            <div className="hero-section">
+              <div className="hero-overlay">
+                <h1 className='text-light fs-1'>Bonjour, je suis John Doe</h1>
+                <h2 className='text-light'>Développeur Web full stack</h2>
+                <Button variant="primary" onClick={handleOpen}>En savoir plus</Button>
+              </div>
+            </div>
 
-      {/* Modale déclenchée */}
-      <Modal show={showModal} handleClose={handleClose} />
-    </div>
+            {/* Modale déclenchée */}
+            <Modal show={showModal} handleClose={handleClose} />
+        </Col>
+      </Row>
+      <Row className="justify-content-md-center section-competences mb-5 ">
+
+        <Col md={4} className="mb-4 about-section">
+          <h5 className="fw-bold border-bottom border-primary border-3 mb-3 pb-2">À propos</h5>
+          <div>
+            <img
+              src={Johndoe}
+              alt="Portrait"
+              className="img-fluid mb-3"
+            />
+            <p> Lorem ipsum dolor sit amet consectetur adipiscing elit. Optio, necessitatibus
+              consectetur tempore perferendis nostrum, ex delectus reiciendis impedit aut iure
+              enim placeat? Natus, neque at?
+            </p>
+            <p> Lorem ipsum dolor sit amet consectetur adipiscing elit. Optio, necessitatibus
+              consectetur tempore perferendis nostrum, ex delectus reiciendis impedit aut iure
+              enim placeat? Natus, neque at?
+            </p>
+            <p> Lorem ipsum dolor sit amet consectetur adipiscing elit. Optio, necessitatibus
+              consectetur tempore perferendis nostrum, ex delectus reiciendis impedit aut iure
+              enim placeat? Natus, neque at?
+            </p>
+          </div>
+        </Col>
+
+        <Col md={4} className="mb-4 skills-section">
+          <h5 className="fw-bold border-bottom border-primary border-3 mb-3 pb-2">Mes compétences</h5>
+          <p>HTML5 90%</p>
+          <ProgressBar now={90} variant="danger" className="mb-3" />
+          <p>CSS3 80%</p>
+          <ProgressBar now={80} variant="info" className="mb-3" />
+          <p>JAVASCRIPT 70%</p>
+          <ProgressBar now={70} variant="warning" className="mb-3" />
+          <p>PHP 60%</p>
+          <ProgressBar now={60} variant="success" className="mb-3" />
+          <p>REACT 50%</p>
+          <ProgressBar now={50} variant="primary" className="mb-3" />
+        </Col>
+      </Row>
+    </Container>
   );
 }
 
