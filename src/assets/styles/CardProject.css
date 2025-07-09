@@ -1,5 +1,6 @@
 .card-project {
   transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
 }
 
 .card-project:hover {
@@ -10,5 +11,7 @@
 
 .card-project .card-img-top {
   object-fit: cover;
-  height: 100%;
+}
+.button-project {
+  width: 40%;
 }

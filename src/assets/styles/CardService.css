@@ -1,0 +1,8 @@
+.card-service {
+  transition: transform 0.3s ease;
+  border-radius: 6px;
+}
+
+.card-service:hover {
+  transform: translateY(-5px);
+}
