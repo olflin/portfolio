@@ -43,10 +43,7 @@ function Services() {
         </p>
         <div
           className="boderSevice border-bottom border-primary border-5 mb-5 pb-3"
-          style={{
-            width: '30%',
-            margin: 'auto',
-          }}
+          style={{width: '30%',margin: 'auto',}}
         ></div>
 
         <Row className="g-4">
@@ -57,6 +54,7 @@ function Services() {
           ))}
         </Row>
       </Container>
+      
     </div>
   );
 }
