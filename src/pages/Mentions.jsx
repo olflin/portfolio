@@ -44,8 +44,8 @@ function Mentions() {
           <Accordion.Header>Crédits</Accordion.Header>
           <Accordion.Body>
               <p className='fw-bold fs-3'>Crédits</p>
-              <p> Ce site a été réalisé par John Doe, étudiant au <a href="#">Centre Européen de formation</a> </p>
-              <p className='fst-italic'> Les images utilisées sur ce site sont libres de droits et on été obtenues sur le site <a href="#">Pixabay</a></p>
+              <p> Ce site a été réalisé par John Doe, étudiant au <a href="https://www.centre-europeen-formation.fr">Centre Européen de formation</a> </p>
+              <p className='fst-italic'> Les images utilisées sur ce site sont libres de droits et on été obtenues sur le site <a href="https://pixabay.com">Pixabay</a></p>
               <p className='fst-italic'> La favicon de ce site a été fournie par <a href="#">John doe Icons erstellt von Freepik-Flayicon</a></p>
           </Accordion.Body>
         </Accordion.Item>
