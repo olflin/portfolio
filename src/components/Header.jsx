@@ -26,7 +26,7 @@ function Header() {
                           Services
                         </NavLink>
 
-                        <NavLink to="/portfolio" className={({ isActive }) =>
+                        <NavLink to="/Portfolio" className={({ isActive }) =>
                             isActive ? "nav-link active" : "nav-link"
                         }>
                           Portfolio

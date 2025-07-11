@@ -37,16 +37,15 @@ function Services() {
       />
 
       <Container className="my-5">
-        <h2 className="text-center fw-bold">Mon offre de services</h2>
-        <p className="text-center fw-light mb-4">
+        <h1 className="text-center fw-bold fs-1">Mon offre de services</h1>
+        <p className="text-center mb-4">
           Voici les prestations sur lesquelles je peux intervenir
         </p>
         <div
-          className="boderSevice border-bottom border-primary border-5 mb-5 pb-3"
-          style={{width: '30%',margin: 'auto',}}
+          className="boderSevice border-bottom border-primary border-5 mb-5 pb-3 w-50 mx-auto"
         ></div>
 
-        <Row className="g-4">
+        <Row className="g-4 my-3">
           {services.map((service, index) => (
             <Col key={index} xs={12} md={6} lg={4}>
               <CardService {...service} />

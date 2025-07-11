@@ -1,17 +1,13 @@
 .card-project {
-  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
-  height: 100%;
+  transition: all 0.3s ease;
 }
 
 .card-project:hover {
   background-color: #efefef;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 1 4px 12px rgba(0, 0, 0, 0.15);
   transform: translateY(-4px);
 }
 
-.card-project .card-img-top {
-  object-fit: cover;
-}
-.button-project {
-  width: 40%;
-}
+.button-project:hover {
+   background-color: #2e82ff;
+  }

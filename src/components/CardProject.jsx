@@ -4,7 +4,7 @@ import '../assets/styles/CardProject.css';
 
 function CardProject({ title, description, imageSrc, projectLink, sources }) {
   return (
-    <Card className="card-project text-center">
+    <Card className="card-project text-center h-100">
       <Card.Img variant="top" src={imageSrc} alt={title} />
       <Card.Body className="d-flex flex-column align-items-center">
         <Card.Title className='fs-4 fw-bold'>{title}</Card.Title>

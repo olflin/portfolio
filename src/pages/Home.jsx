@@ -12,14 +12,14 @@ function Home() {
   const handleClose = () => setShowModal(false);
 
   return (
-    <Container fluid className="hero mb-5 p-0">
-      <Row className="justify-content-md-center">
+    <Container fluid className="hero mb-5 p-0 d-flex flex-column align-items-center">
+      <Row className="justify-content-md-center w-100 mb-5">
         <Col md={12} className="text-center px-0 mb-4">
             <div className="hero-section">
               <div className="hero-overlay">
-                <h1 className='text-light fs-1'>Bonjour, je suis John Doe</h1>
-                <h2 className='text-light'>Développeur Web full stack</h2>
-                <Button variant="primary" onClick={handleOpen}>En savoir plus</Button>
+                <h1 className='text-light fs-0 mb-5'>Bonjour, je suis John Doe</h1>
+                <h2 className='text-light mb-5'>Développeur Web full stack</h2>
+                <Button variant="danger" onClick={handleOpen}>En savoir plus</Button>
               </div>
             </div>
 
@@ -27,10 +27,9 @@ function Home() {
             <Modal show={showModal} handleClose={handleClose} />
         </Col>
       </Row>
-      <Row className="justify-content-md-center section-competences mb-5 ">
-
-        <Col md={4} className="mb-4 about-section">
-          <h5 className="fw-bold border-bottom border-primary border-3 mb-3 pb-2">À propos</h5>
+      <Row className="justify-content-md-center section-competences mb-5 w-75 shadow">
+        <Col md={6} className="mb-4 about-section">
+          <h3 className="fw-bold border-bottom border-primary border-3 mb-3 pb-2">À propos</h3>
           <div>
             <img
               src={Johndoe}
@@ -51,9 +50,8 @@ function Home() {
             </p>
           </div>
         </Col>
-
-        <Col md={4} className="mb-4 skills-section">
-          <h5 className="fw-bold border-bottom border-primary border-3 mb-3 pb-2">Mes compétences</h5>
+        <Col md={6} className="mb-4 skills-section">
+          <h3 className="fw-bold border-bottom border-primary border-3 mb-3 pb-2">Mes compétences</h3>
           <p>HTML5 90%</p>
           <ProgressBar now={90} variant="danger" className="mb-3" />
           <p>CSS3 80%</p>

@@ -60,13 +60,13 @@ const projects = [
 function Portfolio() {
   return (
 
-    <Container fluid className="portfolio mb-5 p-0">
+    <Container fluid className="portfolio mb-5 p-0 d-flex flex-column align-items-center">
       <img src={Banner} alt="Portfolio Banner" className="img-fluid mb-4 banner-img" />
-      <h2 className="text-center fw-bold mb-4">Portfolio</h2>
+      <h1 className="text-center fw-bold mb-4">Portfolio</h1>
       <p className="text-center">Voici quelques-unes de mes réalisations.</p>
-      <div className='section-contact border-bottom border-primary border-5 mb-5 pb-3'>
+      <div className='section-contact border-bottom border-primary border-5 mb-5 pb-3 w-25'>
       </div>
-      <Row className="mx-5 px-5 mt-1">
+      <Row className="mt-3 w-75">
         {projects.map((p, i) => (
           <Col xs={12} md={6} lg={4} key={i} className="mb-4"> 
             <CardProject {...p} />
